@@ -498,7 +498,7 @@ def weather_api_tool(location: str, units: str = "metric"):
     except Exception as e:
         return f"Error processing weather request: {str(e)}"
  
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key="AIzaSyBhF_cnk4HK71puNptOSwtGg4hR96JImfY")
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash",)
 
 tools = [Internet_tool, wikipedia_tool, hybrid_search_tool, sentence_embedding_search,arxiv_api_tool,weather_api_tool]
 
